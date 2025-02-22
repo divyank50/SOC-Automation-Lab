@@ -10,9 +10,16 @@ The above image shows the diagram of the SOC Automation Project
 - Windows VM
 - DigitalOcean (For hosting Wazuh and Hive instances)
 
-Step 1: Create 2 droplets, one for Wazuh and another one for Hive
+**Step 1: Create 2 droplets, one for Wazuh and another one for Hive**
 ![Screenshot 2025-02-16 at 1 22 38 PM](https://github.com/user-attachments/assets/846fa8be-7f72-4064-b9c3-49bbe94951fd)
 ![Screenshot 2025-02-16 at 1 22 49 PM](https://github.com/user-attachments/assets/1869e5a8-8cc0-481f-a61f-ba05c8914fdb)
 ![Screenshot 2025-02-16 at 1 22 57 PM](https://github.com/user-attachments/assets/98182ab2-3a09-440a-aee3-01f7fc367117)
 ![Screenshot 2025-02-16 at 1 24 13 PM](https://github.com/user-attachments/assets/43a6249d-2112-4b26-bebe-91a56e6620ff)
 ![Screenshot 2025-02-16 at 1 25 36 PM](https://github.com/user-attachments/assets/aa3848a3-7b90-4ec3-955b-035acec09f76)
+We will use the same droplet configuration for Hive as well.
+
+**After Hive and Wazuh Droplets are created, we need to create a Firewall and _add your Public IP Address_, so the Wazuh and Hive instances don't get brute forced because these instance will be open to the internet, so by adding our Public IP Address, we are only allowing us to connect to these 2 instances.**
+![WTveD](https://github.com/user-attachments/assets/608ea72a-efc3-4a0a-aae3-baa3cf5d21d7)
+![fAF1X](https://github.com/user-attachments/assets/11255aed-c112-4347-bd59-342e706bbad3)
+Insert your **PUBLIC IP ADDRESS** where you see red boxes, and configure the TCP and UDP rules like its shown in the image.
+![Screenshot 2025-02-16 at 1 28 41 PM](https://github.com/user-attachments/assets/01e917c5-d19c-4067-be37-2f8f22088650)
