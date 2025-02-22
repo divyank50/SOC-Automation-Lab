@@ -22,4 +22,7 @@ We will use the same droplet configuration for Hive as well.
 ![WTveD](https://github.com/user-attachments/assets/608ea72a-efc3-4a0a-aae3-baa3cf5d21d7)
 ![fAF1X](https://github.com/user-attachments/assets/11255aed-c112-4347-bd59-342e706bbad3)
 Insert your **PUBLIC IP ADDRESS** where you see red boxes, and configure the TCP and UDP rules like its shown in the image.
-![Screenshot 2025-02-16 at 1 28 41 PM](https://github.com/user-attachments/assets/01e917c5-d19c-4067-be37-2f8f22088650)
+![Screenshot 2025-02-16 at 1 28 4![Screenshot 2025-02-16 at 1 29 46 PM](https://github.com/user-attachments/assets/5ed1b20c-7dd4-4613-b6e2-59be9c107165)
+
+Now we need to add both of the instances in the Firewall group, therefore click on the instance/droplet and then click Networking.
+1 PM](https://github.com/user-attachments/assets/01e917c5-d19c-4067-be37-2f8f22088650)
