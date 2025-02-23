@@ -53,4 +53,9 @@ You will have to search your instance name to add here and same for the Hive ins
 ![Screenshot 2025-02-16 at 2 04 32 PM](https://github.com/user-attachments/assets/8642e1b9-3d3e-4ce1-a5d6-7fc38b2dee4b)
 ![Screenshot 2025-02-16 at 2 04 41 PM](https://github.com/user-attachments/assets/39739f97-97b8-4bed-9e08-0171b4e5f115)
 ![Screenshot 2025-02-16 at 2 20 45 PM](https://github.com/user-attachments/assets/c5c7dd79-5103-4903-a244-d61ab1594a0c)
+You can confirm if the agent is installed on your system by going to the control panel> programs > program and feature.
+![Screenshot 2025-02-16 at 2 21 01 PM](https://github.com/user-attachments/assets/7e914579-3040-4caf-96bc-54bc1f20b21f)
+![Screenshot 2025-02-16 at 2 21 25 PM](https://github.com/user-attachments/assets/50a73334-c2fb-4fba-bc12-37f251258348)
 
+**Step 3: Need to Install the Hive**
+Refer to the following page for Hive Installation
