@@ -57,6 +57,11 @@ You can confirm if the agent is installed on your system by going to the control
 ![Screenshot 2025-02-16 at 2 21 01 PM](https://github.com/user-attachments/assets/7e914579-3040-4caf-96bc-54bc1f20b21f)
 ![Screenshot 2025-02-16 at 2 21 25 PM](https://github.com/user-attachments/assets/50a73334-c2fb-4fba-bc12-37f251258348)
 
+6. Now that the agent is installed on the endpoint, lets do some configuration in Wazuh.
+7. <img width="1451" alt="Screenshot 2025-02-22 at 10 35 47 PM" src="https://github.com/user-attachments/assets/16db0194-9d23-4f82-b649-20724ea236f6" />
+<img width="1467" alt="Screenshot 2025-02-22 at 10 36 12 PM" src="https://github.com/user-attachments/assets/f0f30455-4538-462e-8478-cc4f33f73a3d" />
+
+
 **Step 3: Need to Install the Hive**
 1. [Hive Installation](https://github.com/divyank50/SOC-Automation-Lab/blob/main/Hive_Installation)
 2. These images just shows the instllation of the  
@@ -83,4 +88,7 @@ After you install, you need to make the following changes in the "/etc/elasticse
 2. [Install Mimikatz](https://github.com/gentilkiwi/mimikatz/releases)
    Download the "mimikatz_trunk.zip" file
 3. Extract the mimikatz folder.
+4. Lets execute Mimikatz.exe
+5. Open powershell/command prompt and go the mimikatz directory. The mimikatz.exe file is inside the x64 folder. Execute the file using powershell/cmd.
+6. AS you execute you should see events generated in Wazuh realted to this.
    
