@@ -75,3 +75,12 @@ After you install, you need to make the following changes in the "/etc/elasticse
 3. [Also need to download Sysmon Config file](https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml)
 4. Move the sysmon config file in the Sysmon folder and then execute the command that is shown in the image below, since you have moved the sysmonconfig file in the same folder, just don't include the file path after the **"-i"** paramter, instead just put the file name.
 5. ![Screenshot 2025-02-16 at 6 45 21 PM](https://github.com/user-attachments/assets/1e1fb929-7b91-4753-84d3-de25f1401e26)
+6. You can check if sysmon is confiured and runnig properly by going into: _Event Viewer> Application and Services > Microsoft > Windows > Sysmon > Operational_
+   ![Screenshot 2025-02-20 at 10 11 42 PM](https://github.com/user-attachments/assets/59fc799e-be24-4109-8406-f544a34b13b1)
+
+**Step 5: Install Mimikatz**
+1. Before we install Mimikatz, make sure to exclude the Downloads Folder path by going into Windows Defender and Virus & Threat Protection and Exclude File path.
+2. [Install Mimikatz](https://github.com/gentilkiwi/mimikatz/releases)
+   Download the "mimikatz_trunk.zip" file
+3. Extract the mimikatz folder.
+   
