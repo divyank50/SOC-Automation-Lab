@@ -19,8 +19,7 @@ The above image shows the diagram of the SOC Automation Project
 We will use the same droplet configuration for Hive as well.
 
 **After Hive and Wazuh Droplets are created, we need to create a Firewall and _add your Public IP Address_, so the Wazuh and Hive instances don't get brute forced because these instance will be open to the internet, so by adding our Public IP Address, we are only allowing us to connect to these 2 instances.**
-![WTveD](https://github.com/user-attachments/assets/608ea72a-efc3-4a0a-aae3-baa3cf5d21d7)
-![fAF1X](https://github.com/user-attachments/assets/11255aed-c112-4347-bd59-342e706bbad3)
+![Screenshot 2025-02-16 at 1 27 42 PM](https://github.com/user-attachments/assets/513b39b0-fa2b-474c-8976-cb58a6a6841d)
 Insert your **PUBLIC IP ADDRESS** where you see red boxes, and configure the TCP and UDP rules like its shown in the image.
 ![Screenshot 2025-02-16 at 1 28 4![Screenshot 2025-02-16 at 1 29 46 PM](https://github.com/user-attachments/assets/5ed1b20c-7dd4-4613-b6e2-59be9c107165)
 
