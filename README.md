@@ -25,4 +25,7 @@ Insert your **PUBLIC IP ADDRESS** where you see red boxes, and configure the TCP
 ![Screenshot 2025-02-16 at 1 28 4![Screenshot 2025-02-16 at 1 29 46 PM](https://github.com/user-attachments/assets/5ed1b20c-7dd4-4613-b6e2-59be9c107165)
 
 Now we need to add both of the instances in the Firewall group, therefore click on the instance/droplet and then click Networking.
-1 PM](https://github.com/user-attachments/assets/01e917c5-d19c-4067-be37-2f8f22088650)
+![Screenshot 2025-02-16 at 1 29 46 PM](https://github.com/user-attachments/assets/b254c724-da20-4696-b66c-8288839882f9)
+![Screenshot 2025-02-16 at 1 30 55 PM](https://github.com/user-attachments/assets/b0970efd-134a-4f77-9c98-b20e079616f0)
+
+
