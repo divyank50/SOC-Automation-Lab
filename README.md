@@ -58,4 +58,20 @@ You can confirm if the agent is installed on your system by going to the control
 ![Screenshot 2025-02-16 at 2 21 25 PM](https://github.com/user-attachments/assets/50a73334-c2fb-4fba-bc12-37f251258348)
 
 **Step 3: Need to Install the Hive**
-[Hive Installation](https://github.com/divyank50/SOC-Automation-Lab/blob/main/Hive_Installation)
+1. [Hive Installation](https://github.com/divyank50/SOC-Automation-Lab/blob/main/Hive_Installation)
+2. These images just shows the instllation of the  
+![Screenshot 2025-02-16 at 3 07 18 PM](https://github.com/user-attachments/assets/2767cd1c-144b-41e2-9ee5-051b20e7e073)
+![Screenshot 2025-02-16 at 3 07 29 PM](https://github.com/user-attachments/assets/d6fe7552-f59d-4486-a3a9-8e61cc63af48)
+![Screenshot 2025-02-16 at 3 07 44 PM](https://github.com/user-attachments/assets/953e1cb4-39e3-4188-b149-b227e4208b3a)
+
+After you install, you need to make the following changes in the "/etc/elasticsearch/elasticsearch.yml" file.
+![Screenshot 2025-02-16 at 3 10 47 PM](https://github.com/user-attachments/assets/955193bf-62d5-4de3-8edf-2241ba1d5a0d)
+![Screenshot 2025-02-16 at 3 12 10 PM](https://github.com/user-attachments/assets/e9f2cb72-9c51-42e0-9a05-df7bfe707262)
+
+
+**Step 4: Installing SYSMON on the Windows Endpoint**
+1. [CLick here to Download Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+2. Extract the Sysmon zip folder
+3. [Also need to download Sysmon Config file](https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml)
+4. Move the sysmon config file in the Sysmon folder and then execute the command that is shown in the image below, since you have moved the sysmonconfig file in the same folder, just don't include the file path after the **"-i"** paramter, instead just put the file name.
+5. ![Screenshot 2025-02-16 at 6 45 21 PM](https://github.com/user-attachments/assets/1e1fb929-7b91-4753-84d3-de25f1401e26)
