@@ -1,16 +1,16 @@
 # SOC-Automation-Lab
 
 ![image](https://github.com/user-attachments/assets/1d306b93-e6ad-4d4e-b1f5-ef773e92efcf)
-The above image shows the diagram of the SOC Automation Project
+The above image depicts the SOC Automation Project diagram.
 
 **The following tools will be used in this project:**
 - Wazuh (SIEM)
-- HIVE (Case Management)
+- TheHive (Case Management)
 - Shuffle (Automation)
 - Windows VM
 - DigitalOcean (For hosting Wazuh and Hive instances)
 
-**Step 1: Create 2 droplets, one for Wazuh and another one for Hive**
+**Step 1: Create two droplets: one for Wazuh and another for TheHive.**
   ![Screenshot 2025-02-16 at 1 22 38 PM](https://github.com/user-attachments/assets/846fa8be-7f72-4064-b9c3-49bbe94951fd)
   ![Screenshot 2025-02-16 at 1 22 49 PM](https://github.com/user-attachments/assets/1869e5a8-8cc0-481f-a61f-ba05c8914fdb)
   ![Screenshot 2025-02-16 at 1 22 57 PM](https://github.com/user-attachments/assets/98182ab2-3a09-440a-aee3-01f7fc367117)
@@ -18,8 +18,8 @@ The above image shows the diagram of the SOC Automation Project
   ![Screenshot 2025-02-16 at 1 25 36 PM](https://github.com/user-attachments/assets/aa3848a3-7b90-4ec3-955b-035acec09f76)
   We will use the same droplet configuration for Hive as well.
   
-1. **After Hive and Wazuh Droplets are created, we need to create a Firewal rule and _add your Public IP Address_, so the Wazuh and Hive instances don't get brute forced as these instance will be open to the internet.**
-2. Insert your **PUBLIC IP ADDRESS** where you see red boxes, and configure the TCP and UDP rules like its shown in the image.
+1. **After Hive and Wazuh Droplets are created, need to create a firewall rule and add your public IP address to prevent brute force attacks on the Wazuh and TheHive instances, as they will be accessible over the internet.**
+2. Insert your **public IP address** where indicated by the red boxes, and configure the TCP and UDP rules as shown in the image.
   ![Screenshot 2025-02-16 at 1 27 42 PM](https://github.com/user-attachments/assets/513b39b0-fa2b-474c-8976-cb58a6a6841d)
 
 3. Now lets add both of the instances in the Firewall Group that we created.
@@ -43,7 +43,7 @@ You will have to search your instance name to add here and same for the Hive ins
    ![Screenshot 2025-02-16 at 1 49 51 PM](https://github.com/user-attachments/assets/614b9913-f27f-4d9d-bbb2-c8c2ef028df9)
     Run the command that is showed in the above image or [Click the following link for the latest version](https://documentation.wazuh.com/current/quickstart.html)
    ![Screenshot 2025-02-16 at 1 52 17 PM](https://github.com/user-attachments/assets/331208aa-e73d-40de-a4a3-fbd8bcd67065)
-   This installaiton will take some time, so wait until the installtion is finished and then once its finished you should see the username and password like its shown in the below image, **make sure to take a note of the user and passwrod as this will be used for sign in to the dashboard.**
+   This installation will take some time, so wait until the installation is finished and then once its finished you should see the username and password like its shown in the below image, **make sure to take a note of the user and passwrod as this will be used for sign in to the dashboard.**
    ![Screenshot 2025-02-16 at 2 00 25 PM](https://github.com/user-attachments/assets/8c334de7-6e4f-4057-b691-0fe5a8b9482a)
 
 4. Once you get the username and password you can visit the wazuh Dashboard: https://wazuh_instance_ip_address.
@@ -150,8 +150,4 @@ Image of Hive, showcasing Alert
 Image showcasing, Email sent upon alert detection
 <img width="1097" alt="Screenshot 2025-02-22 at 11 40 55 PM" src="https://github.com/user-attachments/assets/9b8db5a0-a100-4e8d-8788-e0bbe7e4f549" />
 
-So that is the SOC Automation Lab/Project, this project showcase the usage of Wazuh SIEM to detect events/alerts execution that occured on Windows endpoint and upon alert executing an automation was created in Shuffle to get all the alert details, extract the relevatn IOC and query it using VT API and then create an alert in Hive and send an email to the analyst regarding the alert. This project also showcases the usage of different tools and cloud environment (DigitalOcean) to setup the Wazuh and Hive instances.
-
-
-
-   
+This SOC Automation Lab/Project demonstrates the use of Wazuh SIEM to detect security events and alerts generated on a Windows endpoint. Upon detecting an alert, an automated workflow in Shuffle retrieves the alert details, extracts relevant IOCs, queries them using the VirusTotal API, and then creates a corresponding alert in TheHive. Additionally, an email notification is sent to the analyst for further investigation. This project also highlights the integration of various security tools and the use of a cloud environment (DigitalOcean) to deploy Wazuh and TheHive instances.
