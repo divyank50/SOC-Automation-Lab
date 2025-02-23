@@ -134,10 +134,13 @@ We can see there is a field name called "originalFileName", so lets create an al
 1. Visit shuffler.io website and create an account.
 2. I created the following workflow, whenever a mimikatz alert is detected, the shuffle automation will received all the information about that alert, it will extract the SHA 256 hash and then using Virus Total Hash Report API functionality it will query results of the Hash and then it will create an alert in Hive and also send an email to the Analyst about the alert.
 
-Images of the Automation Workflow in Shuffle:
+Image showcasing Automation Workflow in Shuffle
 <img width="1232" alt="Screenshot 2025-02-22 at 11 33 41 PM" src="https://github.com/user-attachments/assets/49eec1cc-399c-48b7-89cd-b5529eeb5dc9" />
+Image showcasing alert details from Wazuh
 <img width="1442" alt="Screenshot 2025-02-22 at 11 33 59 PM" src="https://github.com/user-attachments/assets/b7fcd703-edac-4e9f-8538-845aa68db576" />
+Image showcasing SHA256 hash regex
 <img width="806" alt="Screenshot 2025-02-22 at 11 34 14 PM" src="https://github.com/user-attachments/assets/c4d6d279-e459-4cfc-974c-df439c908f5f" />
+Image showcasing SHA256 queried via API to VT
 <img width="1265" alt="Screenshot 2025-02-22 at 11 34 57 PM" src="https://github.com/user-attachments/assets/c53c78b8-6d2a-4797-b3f9-ec9656b13c54" />
 I get error code 400, because I tried to re-run the workflow and forgot to delete the alert in hive and you can also see the error code mentions "alert already exists".
 <img width="1451" alt="Screenshot 2025-02-22 at 11 35 26 PM" src="https://github.com/user-attachments/assets/eb5ba95b-7db2-4b8b-9511-13925905cefb" />
@@ -147,6 +150,7 @@ Image of Hive, showcasing Alert
 Image showcasing, Email sent upon alert detection
 <img width="1097" alt="Screenshot 2025-02-22 at 11 40 55 PM" src="https://github.com/user-attachments/assets/9b8db5a0-a100-4e8d-8788-e0bbe7e4f549" />
 
+So that is the SOC Automation Lab/Project, this project showcase the usage of Wazuh SIEM to detect events/alerts execution that occured on Windows endpoint and upon alert executing an automation was created in Shuffle to get all the alert details, extract the relevatn IOC and query it using VT API and then create an alert in Hive and send an email to the analyst regarding the alert. This project also showcases the usage of different tools and cloud environment (DigitalOcean) to setup the Wazuh and Hive instances.
 
 
 
