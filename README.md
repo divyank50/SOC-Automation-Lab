@@ -41,7 +41,7 @@ You will have to search your instance name to add here and same for the Hive ins
 
 3. After all the packages are installed/updated to the latest version, now we will download wazuh
    ![Screenshot 2025-02-16 at 1 49 51 PM](https://github.com/user-attachments/assets/614b9913-f27f-4d9d-bbb2-c8c2ef028df9)
-    Run the command that is showed in the image or you can use the following link to get the latest version: https://documentation.wazuh.com/current/quickstart.html
+    Run the command that is showed in the above image or [Click the following link for the latest version](https://documentation.wazuh.com/current/quickstart.html)
    ![Screenshot 2025-02-16 at 1 52 17 PM](https://github.com/user-attachments/assets/331208aa-e73d-40de-a4a3-fbd8bcd67065)
    This installaiton will take some time, so wait until the installtion is finished and then once its finished you should see the username and password like its shown in the below image, **make sure to take a note of the user and passwrod as this will be used for sign in to the dashboard.**
    ![Screenshot 2025-02-16 at 2 00 25 PM](https://github.com/user-attachments/assets/8c334de7-6e4f-4057-b691-0fe5a8b9482a)
@@ -58,4 +58,4 @@ You can confirm if the agent is installed on your system by going to the control
 ![Screenshot 2025-02-16 at 2 21 25 PM](https://github.com/user-attachments/assets/50a73334-c2fb-4fba-bc12-37f251258348)
 
 **Step 3: Need to Install the Hive**
-Refer to the following page for Hive Installation
+[Hive Installation](https://github.com/divyank50/SOC-Automation-Lab/blob/main/Hive_Installation)
