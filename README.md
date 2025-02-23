@@ -28,6 +28,29 @@ The above image shows the diagram of the SOC Automation Project
 ![Screenshot 2025-02-16 at 1 29 46 PM](https://github.com/user-attachments/assets/9f080487-c4c5-4f1b-a188-39470cb74431)
 ![Screenshot 2025-02-16 at 1 30 55 PM](https://github.com/user-attachments/assets/863ce59a-82ee-4ac8-a927-94067ca40915)
 ![Screenshot 2025-02-16 at 1 31 01 PM](https://github.com/user-attachments/assets/2a8d5fc4-1ba9-4585-8885-f4d73c04bc1e)
+You will have to search your instance name to add here and same for the Hive instance as well, search it.
 ![Screenshot 2025-02-16 at 1 31 14 PM](https://github.com/user-attachments/assets/f9a6d1ce-6f4c-4a8e-817e-3ca102547c87)
 
+
+**Step 2: Download Wazuh on the Wazuh instance.**
+1. You have to connect to Wazuh instance via ssh.
+   _Command_: ssh root@wazuh_instance_ip_address
+
+2. After you connect via SSH, run the following command to update all the packages:
+   apt-get update && apt upgrade
+
+3. After all the packages are installed/updated to the latest version, now we will download wazuh
+   ![Screenshot 2025-02-16 at 1 49 51 PM](https://github.com/user-attachments/assets/614b9913-f27f-4d9d-bbb2-c8c2ef028df9)
+    Run the command that is showed in the image or you can use the following link to get the latest version: https://documentation.wazuh.com/current/quickstart.html
+   ![Screenshot 2025-02-16 at 1 52 17 PM](https://github.com/user-attachments/assets/331208aa-e73d-40de-a4a3-fbd8bcd67065)
+   This installaiton will take some time, so wait until the installtion is finished and then once its finished you should see the username and password like its shown in the below image, **make sure to take a note of the user and passwrod as this will be used for sign in to the dashboard.**
+   ![Screenshot 2025-02-16 at 2 00 25 PM](https://github.com/user-attachments/assets/8c334de7-6e4f-4057-b691-0fe5a8b9482a)
+
+4. Once you get the username and password you can visit the wazuh Dashboard: https://wazuh_instance_ip_address.
+   
+5. Now we need to deploy the wazuh agent on the Windows Endpoint:
+ ![Screenshot 2025-02-16 at 2 18 23 PM](https://github.com/user-attachments/assets/b0880f0f-a65c-4e51-8820-9ae17a617c3a)
+![Screenshot 2025-02-16 at 2 04 32 PM](https://github.com/user-attachments/assets/8642e1b9-3d3e-4ce1-a5d6-7fc38b2dee4b)
+![Screenshot 2025-02-16 at 2 04 41 PM](https://github.com/user-attachments/assets/39739f97-97b8-4bed-9e08-0171b4e5f115)
+![Screenshot 2025-02-16 at 2 20 45 PM](https://github.com/user-attachments/assets/c5c7dd79-5103-4903-a244-d61ab1594a0c)
 
