@@ -66,9 +66,13 @@ Also using terminal go to the following file path and change the "archives:true"
 <img width="1450" alt="Screenshot 2025-02-22 at 11 10 16 PM" src="https://github.com/user-attachments/assets/96afb4fc-ecd3-45c3-97ce-6efb140fcf46" />
 Save the file and restart the wazuh manager, _**"systemctl restart wazuh-manager.service"**_
 
-7.Need to create an archive index pattern to view all the logs from Windows Endpoint, because in "wazuh-alerts" index, you will only see events realted to alerts that are being triggered.
+7. Need to create an archive index pattern to view all the logs from Windows Endpoint, because in "wazuh-alerts" index, you will only see events realted to alerts that are being triggered.
 <img width="1451" alt="Screenshot 2025-02-22 at 10 35 47 PM" src="https://github.com/user-attachments/assets/16db0194-9d23-4f82-b649-20724ea236f6" />
 <img width="1467" alt="Screenshot 2025-02-22 at 10 36 12 PM" src="https://github.com/user-attachments/assets/f0f30455-4538-462e-8478-cc4f33f73a3d" />
+<img width="1027" alt="Screenshot 2025-02-22 at 11 14 27 PM" src="https://github.com/user-attachments/assets/d17db6ec-c976-4de2-a620-d32151cd4297" />
+Click "Next"
+<img width="1040" alt="Screenshot 2025-02-22 at 11 15 08 PM" src="https://github.com/user-attachments/assets/5d0e17a7-7135-4b9f-85a6-a5a5a539d982" />
+Click create Index.
 
 
 **Step 3: Need to Install the Hive**
@@ -114,5 +118,5 @@ Save the file and restart the wazuh manager, _**"systemctl restart wazuh-manager
 3. Extract the mimikatz folder.
 4. Lets execute Mimikatz.exe
 5. Open powershell/command prompt and go the mimikatz directory. The mimikatz.exe file is inside the x64 folder. Execute the file using powershell/cmd.
-6. AS you execute you should see events generated in Wazuh realted to this.
+6. As you execute you should see events generated in Wazuh realted to this.
    
