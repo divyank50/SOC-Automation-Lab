@@ -119,4 +119,35 @@ Click create Index.
 4. Lets execute Mimikatz.exe
 5. Open powershell/command prompt and go the mimikatz directory. The mimikatz.exe file is inside the x64 folder. Execute the file using powershell/cmd.
 6. As you execute you should see events generated in Wazuh realted to this.
+7. Upon the execution of the mimikatz, we can see the event from the archives index in wazuh:
+   <img width="1465" alt="Screenshot 2025-02-22 at 11 22 45 PM" src="https://github.com/user-attachments/assets/c309cb5f-7ff7-4c33-8ba9-1bfa9a992e96" />
+<img width="1455" alt="Screenshot 2025-02-22 at 11 23 48 PM" src="https://github.com/user-attachments/assets/0c953f9b-f4d9-4ccd-bea9-3e3127c4ead2" />
+We can see there is a field name called "originalFileName", so lets create an alert/rule to detect whenever mimikatz is executed on the system, the reason why I have used the "originalFileName" field is because if you change the filename, it won't change the original file name that was captured by sysmon logs and everytime a file is executed it will generate an alert.
+
+8.I created this rule in to detect mimikatz
+<img width="874" alt="Screenshot 2025-02-22 at 11 26 08 PM" src="https://github.com/user-attachments/assets/7230ca94-5719-4d50-b0f3-6d5bb47b3f09" />
+
+9.Since I exectued mimikatz bunch of times, these where the alerts that generated
+<img width="1464" alt="Screenshot 2025-02-22 at 11 27 09 PM" src="https://github.com/user-attachments/assets/3a90680f-a6ef-4210-a2ef-2a8429a62d61" />
+
+**Step 6: Configuring the Automation/Shuffle**
+1. Visit shuffler.io website and create an account.
+2. I created the following workflow, whenever a mimikatz alert is detected, the shuffle automation will received all the information about that alert, it will extract the SHA 256 hash and then using Virus Total Hash Report API functionality it will query results of the Hash and then it will create an alert in Hive and also send an email to the Analyst about the alert.
+
+Images of the Automation Workflow in Shuffle:
+<img width="1232" alt="Screenshot 2025-02-22 at 11 33 41 PM" src="https://github.com/user-attachments/assets/49eec1cc-399c-48b7-89cd-b5529eeb5dc9" />
+<img width="1442" alt="Screenshot 2025-02-22 at 11 33 59 PM" src="https://github.com/user-attachments/assets/b7fcd703-edac-4e9f-8538-845aa68db576" />
+<img width="806" alt="Screenshot 2025-02-22 at 11 34 14 PM" src="https://github.com/user-attachments/assets/c4d6d279-e459-4cfc-974c-df439c908f5f" />
+<img width="1265" alt="Screenshot 2025-02-22 at 11 34 57 PM" src="https://github.com/user-attachments/assets/c53c78b8-6d2a-4797-b3f9-ec9656b13c54" />
+I get error code 400, because I tried to re-run the workflow and forgot to delete the alert in hive and you can also see the error code mentions "alert already exists".
+<img width="1451" alt="Screenshot 2025-02-22 at 11 35 26 PM" src="https://github.com/user-attachments/assets/eb5ba95b-7db2-4b8b-9511-13925905cefb" />
+
+Image of Hive, showcasing Alert
+<img width="1461" alt="Screenshot 2025-02-22 at 11 39 29 PM" src="https://github.com/user-attachments/assets/e15e818d-5593-477b-bb1c-ddc56d4c9bae" />
+Image showcasing, Email sent upon alert detection
+<img width="1097" alt="Screenshot 2025-02-22 at 11 40 55 PM" src="https://github.com/user-attachments/assets/9b8db5a0-a100-4e8d-8788-e0bbe7e4f549" />
+
+
+
+
    
