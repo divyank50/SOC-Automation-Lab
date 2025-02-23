@@ -57,8 +57,8 @@ You can confirm if the agent is installed on your system by going to the control
 ![Screenshot 2025-02-16 at 2 21 01 PM](https://github.com/user-attachments/assets/7e914579-3040-4caf-96bc-54bc1f20b21f)
 ![Screenshot 2025-02-16 at 2 21 25 PM](https://github.com/user-attachments/assets/50a73334-c2fb-4fba-bc12-37f251258348)
 
-6. Now that the agent is installed on the endpoint, lets do some configuration in Wazuh.
-7. <img width="1451" alt="Screenshot 2025-02-22 at 10 35 47 PM" src="https://github.com/user-attachments/assets/16db0194-9d23-4f82-b649-20724ea236f6" />
+6. Now that the agent is installed on the endpoint, lets do some configuration in Wazuh, we need to create an archive index pattern to view all the logs from Windows Endpoint, because in "wazuh-alerts" index, you will only see events realted to alerts that are being triggered.
+<img width="1451" alt="Screenshot 2025-02-22 at 10 35 47 PM" src="https://github.com/user-attachments/assets/16db0194-9d23-4f82-b649-20724ea236f6" />
 <img width="1467" alt="Screenshot 2025-02-22 at 10 36 12 PM" src="https://github.com/user-attachments/assets/f0f30455-4538-462e-8478-cc4f33f73a3d" />
 
 
@@ -69,9 +69,23 @@ You can confirm if the agent is installed on your system by going to the control
 ![Screenshot 2025-02-16 at 3 07 29 PM](https://github.com/user-attachments/assets/d6fe7552-f59d-4486-a3a9-8e61cc63af48)
 ![Screenshot 2025-02-16 at 3 07 44 PM](https://github.com/user-attachments/assets/953e1cb4-39e3-4188-b149-b227e4208b3a)
 
-After you install, you need to make the following changes in the "/etc/elasticsearch/elasticsearch.yml" file.
+3. You need to make changes in the "/etc/cassendra/cassendra.yaml" file, you can use nano to make changes
+4. Configure the Public IP Address of the Hive instance as shown in the below image:
+   <img width="1398" alt="Screenshot 2025-02-22 at 10 54 50 PM" src="https://github.com/user-attachments/assets/62440233-c002-482b-87c1-748550ca17a6" />
+   Also add the Hive instance Public Ip address as shown in the below image:
+   <img width="1456" alt="Screenshot 2025-02-22 at 10 55 58 PM" src="https://github.com/user-attachments/assets/9fa493bb-1f24-461e-9b4b-c72e6f4dffff" />
+   Again change the ip address to hive instance
+   <img width="1443" alt="Screenshot 2025-02-22 at 10 57 27 PM" src="https://github.com/user-attachments/assets/dde3fb2a-b51c-401d-8b46-23155571e80e" />
+
+5. Now stop the cassendra service.** "systemctl stop cassendra.service"**
+6. Now remove the old cassendra files. **"rm -rf /var/lib/cassendra/*"**
+7. Now start the cassendra service.** "systemctl start cassendra.service"** And you can check the staus of cassendra using, ** "systemctl status cassendra.service"**.
+8. After you install, you need to make the following changes in the "/etc/elasticsearch/elasticsearch.yml" file.
 ![Screenshot 2025-02-16 at 3 10 47 PM](https://github.com/user-attachments/assets/955193bf-62d5-4de3-8edf-2241ba1d5a0d)
 ![Screenshot 2025-02-16 at 3 12 10 PM](https://github.com/user-attachments/assets/e9f2cb72-9c51-42e0-9a05-df7bfe707262)
+9. After you make these changes, make sure to restart the elastic services using the following command: **"systemctl restart elasticsearch"**
+10. Also need to change the folder access of the hive from root to "thehive" user to be able to access the hive, **"chown -R thehive:thehive /opt/thp"**
+
 
 
 **Step 4: Installing SYSMON on the Windows Endpoint**
